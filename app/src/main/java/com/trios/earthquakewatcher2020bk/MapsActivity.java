@@ -56,7 +56,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
 
-        Toast.makeText(this,"Hello from Android", Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"This is branch two", Toast.LENGTH_LONG).show();
 
 
         queue = Volley.newRequestQueue(this);
