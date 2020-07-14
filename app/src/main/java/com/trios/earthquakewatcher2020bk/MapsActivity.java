@@ -14,6 +14,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -53,6 +54,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+        Toast.makeText(this,"Hello from Android", Toast.LENGTH_LONG).show();
 
 
         queue = Volley.newRequestQueue(this);
@@ -156,7 +160,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             JSONArray features =response.getJSONArray("features");
                             for (int i = 0; i< Constants.LIMIT; i++){
                                 JSONObject properties = features.getJSONObject(i).getJSONObject("properties");
-                                
+
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
